@@ -1,0 +1,13 @@
+[Unit]
+Description = Web server
+
+[Service]
+Environment="DATABASE_URL=postgres://non_manaka@localhost:5433/hccc_judge"
+Environment="CONTEST_BEGIN=2022-11-13T18:00:00+09:00"
+Environment="CONTEST_END=2022-11-13T19:00:00+09:00"
+ExecStart = /home/ubuntu/HCCC_Infra/target/release/web_server
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target

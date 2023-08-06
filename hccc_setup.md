@@ -23,5 +23,5 @@ cd HCCC_Infra/
 git switch HCCC_001
 sudo docker-compose up
 export DATABASE_URL="postgres://non_manaka@localhost:5433/hccc_judge"
-cargo r --release --bin judge_server 
-cargo r --release --bin web_server
+cargo build --release --bin judge_server 
+cargo build --release --bin web_server
